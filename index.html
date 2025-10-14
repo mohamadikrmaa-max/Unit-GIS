@@ -11,56 +11,87 @@
       background-color: #f7f9fc;
       color: #333;
     }
+
     header {
       background-color: #003366; /* Biru gelap rasmi */
       color: white;
       text-align: center;
-      padding: 20px 0;
+      padding: 25px 10px;
     }
+
     nav {
       background-color: #002244;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
-      padding: 10px;
+      gap: 25px;
+      padding: 12px;
     }
+
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     section {
-      padding: 40px 20px;
+      padding: 40px 25px;
       max-width: 900px;
       margin: auto;
       background: white;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin-top: 30px;
+      margin-top: 35px;
     }
+
     h2 {
       color: #003366;
+      border-left: 5px solid #003366;
+      padding-left: 10px;
     }
+
     footer {
       text-align: center;
       background-color: #003366;
       color: white;
       padding: 15px 0;
       margin-top: 50px;
+      font-size: 14px;
     }
+
     button {
       background-color: #003366;
       color: white;
       border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
+      padding: 12px 24px;
+      border-radius: 6px;
       cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s;
+      font-size: 15px;
     }
+
     button:hover {
       background-color: #0055aa;
+      transform: scale(1.03);
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 20px 15px;
+      }
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
@@ -74,18 +105,21 @@
     <a href="#utama">Utama</a>
     <a href="#surat">Surat Menyurat</a>
     <a href="#data">Permohonan Data GIS</a>
-    <a href="#Zoom">Permohonan Zoom Online</a>
+    <a href="#zoom">Permohonan Zoom</a>
     <a href="#login">Login Staf</a>
   </nav>
 
   <section id="utama">
     <h2>Selamat Datang ke Portal UNIT GIS DID Sarawak</h2>
-    <p>Portal ini dibangunkan bagi memudahkan urusan surat menyurat dan permohonan data GIS oleh staf serta pelanggan jabatan.</p>
+    <p>
+      Portal ini dibangunkan bagi memudahkan urusan surat menyurat, permohonan data GIS, 
+      dan penyelarasan mesyuarat dalam talian (Zoom) bagi staf dan pelanggan jabatan.
+    </p>
   </section>
 
   <section id="surat">
     <h2>Surat Menyurat</h2>
-    <p>Staf boleh mengemaskini maklumat surat masuk dan keluar melalui borang rasmi jabatan.</p>
+    <p>Staf boleh mengemaskini maklumat surat masuk dan keluar melalui borang rasmi jabatan:</p>
     <button onclick="window.open('LINK_GOOGLE_FORM_SURAT','_blank')">Isi Borang Surat</button>
   </section>
 
@@ -95,12 +129,15 @@
     <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfdrIRxe6ziAZkwq2sFvA2lMmIZWQzt5EhZfZugdW8q38Yg1A/viewform?usp=sf_link','_blank')">Mohon Data GIS</button>
   </section>
 
-  <section id="Zoom">
+  <section id="zoom">
     <h2>Permohonan Zoom Meeting</h2>
-    <p>PENTING :
-        1)   UNTUK ZOOM MEETING, KELULUSAN PERMOHONAN TERTAKHLUK KEPADA SLOT MASA YANG TELAH DIREKODKAN LEBIH AWAL. INI KERANA, MASA MESYUARAT TIDAK BOLEH BERTINDIH ANTARA SATU SAMA LAIN.
-        2)  BAGI MENGELAKKAN PEMBATALAN PADA SAAT AKHIR, SILA HUBUNGI PEGAWAI BERTANGGUNGJAWAB IAITU EN. JACKY HAMBEH ATAU PUAN MISLIMAH DAIMIN UNTUK MENDAPATKAN SLOT KOSONG.</p>
-    <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfdrIRxe6ziAZkwq2sFvA2lMmIZWQzt5EhZfZugdW8q38Yg1A/viewform?usp=sf_link','_blank')">Borang Permohonan</button>
+    <p><strong>PENTING:</strong></p>
+    <ul>
+      <li>KELULUSAN PERMOHONAN TERTAKHLUK KEPADA SLOT MASA YANG TELAH DIREKODKAN LEBIH AWAL.</li>
+      <li>MESYUARAT TIDAK BOLEH BERTINDIH ANTARA SATU SAMA LAIN.</li>
+      <li>UNTUK SLOT KOSONG, SILA HUBUNGI EN. JACKY HAMBEH ATAU PUAN MISLIMAH DAIMIN.</li>
+    </ul>
+    <button onclick="window.open('LINK_GOOGLE_FORM_ZOOM','_blank')">Borang Permohonan Zoom</button>
   </section>
 
   <section id="login">
