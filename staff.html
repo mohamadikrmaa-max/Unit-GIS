@@ -8,12 +8,27 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .container {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      height: 80vh;
+      gap: 40px;
+      flex-wrap: wrap;
     }
-    .login-box {
+
+    .main-box, .login-box {
       background: white;
       padding: 40px;
       border-radius: 10px;
@@ -21,6 +36,11 @@
       text-align: center;
       width: 300px;
     }
+
+    h2 {
+      color: #003366;
+    }
+
     input {
       display: block;
       width: 90%;
@@ -29,6 +49,7 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
+
     button {
       background-color: #003366;
       color: white;
@@ -36,41 +57,76 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      margin-top: 10px;
     }
+
     button:hover {
       background-color: #0055aa;
     }
+
     .hidden {
       display: none;
     }
+
     .menu {
       text-align: center;
     }
+
     .menu button {
       display: block;
       margin: 15px auto;
       width: 80%;
     }
+
+    footer {
+      text-align: center;
+      background-color: #003366;
+      color: white;
+      padding: 10px 0;
+      margin-top: 30px;
+    }
+
   </style>
 </head>
 <body>
-  <div class="login-box" id="loginBox">
-    <h2>Login Staf</h2>
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="checkLogin()">Sign In</button>
-    <p id="error" style="color:red; display:none;">Username atau Password salah!</p>
+
+  <header>
+    <h1>UNIT GIS DID SARAWAK</h1>
+    <p>Portal Staf - Akses Dalaman</p>
+  </header>
+
+  <div class="container">
+    <!-- Kotak kiri: Main Page -->
+    <div class="main-box">
+      <h2>Portal Utama</h2>
+      <p>Kembali ke laman utama portal UNIT GIS DID Sarawak.</p>
+      <button onclick="window.location.href='index.html'">Ke Laman Utama</button>
+    </div>
+
+    <!-- Kotak kanan: Login -->
+    <div class="login-box" id="loginBox">
+      <h2>Login Staf</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="checkLogin()">Sign In</button>
+      <p id="error" style="color:red; display:none;">Username atau Password salah!</p>
+    </div>
+
+    <!-- Menu selepas login -->
+    <div class="menu hidden" id="staffMenu">
+      <h2>Selamat Datang, Staf GIS!</h2>
+      <button onclick="window.open('LINK_ZOOM_RESPON','_blank')">📋 Respon Zoom</button>
+      <button onclick="window.open('LINK_DATA_RESPON','_blank')">🗺️ Respon Data GIS</button>
+      <button onclick="window.open('LINK_SURAT_RESPON','_blank')">✉️ Respon Surat Menyurat</button>
+      <button onclick="window.open('LINK_UPLOAD_SURAT','_blank')">📤 Muat Naik Surat</button>
+      <br>
+      <button onclick="logout()">Log Keluar</button>
+    </div>
   </div>
 
-  <div class="menu hidden" id="staffMenu">
-    <h2>Selamat Datang, Staf GIS!</h2>
-    <button onclick="window.open('LINK_ZOOM_RESPON','_blank')">📋 Respon Zoom</button>
-    <button onclick="window.open('LINK_DATA_RESPON','_blank')">🗺️ Respon Data GIS</button>
-    <button onclick="window.open('LINK_SURAT_RESPON','_blank')">✉️ Respon Surat Menyurat</button>
-    <button onclick="window.open('LINK_UPLOAD_SURAT','_blank')">📤 Muat Naik Surat</button>
-    <br>
-    <button onclick="logout()">Log Keluar</button>
-  </div>
+  <footer>
+    <p>© 2025 UNIT GIS DID Sarawak. Semua Hak Cipta Terpelihara.</p>
+  </footer>
 
   <script>
     function checkLogin() {
@@ -79,6 +135,7 @@
 
       if (user === "GIS" && pass === "Gis1967#") {
         document.getElementById('loginBox').classList.add('hidden');
+        document.querySelector('.main-box').classList.add('hidden');
         document.getElementById('staffMenu').classList.remove('hidden');
       } else {
         document.getElementById('error').style.display = 'block';
@@ -88,10 +145,12 @@
     function logout() {
       document.getElementById('staffMenu').classList.add('hidden');
       document.getElementById('loginBox').classList.remove('hidden');
+      document.querySelector('.main-box').classList.remove('hidden');
       document.getElementById('username').value = '';
       document.getElementById('password').value = '';
       document.getElementById('error').style.display = 'none';
     }
   </script>
+
 </body>
 </html>
