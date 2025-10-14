@@ -1,122 +1,114 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UNIT GIS DID SARAWAK</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #0b2a4a;
-      color: white;
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      color: #333;
     }
     header {
-      background-color: #093366;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      background-color: #003366; /* Biru gelap rasmi */
+      color: white;
+      text-align: center;
+      padding: 20px 0;
     }
-    header img {
-      height: 60px;
+    nav {
+      background-color: #002244;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px;
     }
     nav a {
       color: white;
-      margin-left: 1.5rem;
       text-decoration: none;
       font-weight: bold;
     }
     nav a:hover {
       text-decoration: underline;
     }
-    main {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
     section {
-      background: #12406a;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      margin-bottom: 1.5rem;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 30px;
     }
     h2 {
-      color: #00b4d8;
-      border-bottom: 2px solid #00b4d8;
-      padding-bottom: 0.5rem;
-    }
-    button {
-      background-color: #00b4d8;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0090b8;
+      color: #003366;
     }
     footer {
       text-align: center;
-      background-color: #093366;
-      padding: 1rem;
-      color: #b0c4de;
-      font-size: 0.9rem;
+      background-color: #003366;
+      color: white;
+      padding: 15px 0;
+      margin-top: 50px;
     }
-    iframe {
-      width: 100%;
-      height: 600px;
+    button {
+      background-color: #003366;
+      color: white;
       border: none;
-      border-radius: 8px;
-      margin-top: 1rem;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0055aa;
     }
   </style>
 </head>
 <body>
   <header>
-    <div style="display:flex;align-items:center;gap:1rem;">
-      <img src="did_sarawak_logo.png" alt="Logo DID Sarawak" />
-      <h1>UNIT GIS DID SARAWAK</h1>
-    </div>
-    <nav>
-      <a href="#surat">Surat Menyurat</a>
-      <a href="#permohonan">Permohonan Data GIS</a>
-      <a href="#zoom">Permohonan Zoom</a>
-      <a href="#login">Login Staf</a>
-    </nav>
+    <h1>UNIT GIS DID SARAWAK</h1>
+    <p>Portal Dalaman - Surat Menyurat & Permohonan Data GIS</p>
   </header>
 
-  <main>
-    <section id="surat">
-      <h2>Surat Menyurat</h2>
-      <p>Bahagian ini digunakan oleh staf untuk mengemaskini rekod surat masuk dan keluar. Klik butang di bawah untuk membuka borang Google Form rasmi Unit GIS DID Sarawak.</p>
-      <button onclick="window.open('PASTE_GOOGLE_FORM_SURAT_URL_DI_SINI','_blank')">📄 Buka Google Form Surat Menyurat</button>
-    </section>
+  <nav>
+    <a href="#utama">Utama</a>
+    <a href="#surat">Surat Menyurat</a>
+    <a href="#data">Permohonan Data GIS</a>
+    <a href="#semak">Semak Respon</a>
+    <a href="#login">Login Staf</a>
+  </nav>
 
-    <section id="permohonan">
-      <h2>Permohonan Data GIS</h2>
-      <p>Bahagian ini terbuka kepada pelanggan luar untuk membuat permohonan data GIS. Tiada log masuk diperlukan.</p>
-      <button onclick="window.open(https://forms.gle/MKXtj8xtVGRRJTp18)">🌍 Buka Borang Permohonan Data GIS</button>
-    </section>
+  <section id="utama">
+    <h2>Selamat Datang ke Portal UNIT GIS DID Sarawak</h2>
+    <p>Portal ini dibangunkan bagi memudahkan urusan surat menyurat dan permohonan data GIS oleh staf serta pelanggan jabatan.</p>
+  </section>
 
-    <section id="zoom">
-      <h2>Permohonan Zoom</h2>
-      <p>Gunakan borang berikut untuk memohon sesi Zoom rasmi bersama Unit GIS DID Sarawak.</p>
-      <button onclick="window.open('PASTE_GOOGLE_FORM_ZOOM_URL_DI_SINI','_blank')">🎥 Buka Borang Permohonan Zoom</button>
-    </section>
+  <section id="surat">
+    <h2>Surat Menyurat</h2>
+    <p>Staf boleh mengemaskini maklumat surat masuk dan keluar melalui borang rasmi jabatan.</p>
+    <button onclick="window.open('LINK_GOOGLE_FORM_SURAT','_blank')">Isi Borang Surat</button>
+  </section>
 
-    <section id="login">
-      <h2>Login Staf</h2>
-      <p>Staf Unit GIS boleh log masuk untuk mengakses maklumat surat dan permohonan terkini.</p>
-      <button onclick="alert('Fungsi login Firebase akan ditambah kemudian.')">🔐 Log Masuk Staf</button>
-    </section>
-  </main>
+  <section id="data">
+    <h2>Permohonan Data GIS</h2>
+    <p>Pelanggan boleh membuat permohonan data GIS dengan mengisi borang berikut:</p>
+    <button onclick="window.open('LINK_GOOGLE_FORM_DATA','_blank')">Mohon Data GIS</button>
+  </section>
+
+  <section id="semak">
+    <h2>Semak Respon</h2>
+    <p>Staf boleh menyemak maklum balas dan rekod permohonan yang telah dihantar.</p>
+    <button onclick="window.open('LINK_RESPON_FORM','_blank')">Lihat Respon</button>
+  </section>
+
+  <section id="login">
+    <h2>Login Staf</h2>
+    <p>Akses khas untuk staf UNIT GIS bagi menyemak atau mengemaskini rekod surat dan permohonan.</p>
+    <button onclick="window.open('LINK_LOGIN','_blank')">Login Staf</button>
+  </section>
 
   <footer>
-    &copy; 2025 Unit GIS, Jabatan Pengairan dan Saliran Sarawak. Semua hak cipta terpelihara.
+    <p>© 2025 UNIT GIS DID Sarawak. Semua Hak Cipta Terpelihara.</p>
   </footer>
 </body>
 </html>
