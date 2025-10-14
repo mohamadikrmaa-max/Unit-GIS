@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNIT GIS DID SARAWAK</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #0b2a4a;
+      color: white;
+    }
+    header {
+      background-color: #093366;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section {
+      background: #12406a;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      color: #00b4d8;
+      border-bottom: 2px solid #00b4d8;
+      padding-bottom: 0.5rem;
+    }
+    button {
+      background-color: #00b4d8;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0090b8;
+    }
+    footer {
+      text-align: center;
+      background-color: #093366;
+      padding: 1rem;
+      color: #b0c4de;
+      font-size: 0.9rem;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <img src="did_sarawak_logo.png" alt="Logo DID Sarawak" />
+      <h1>UNIT GIS DID SARAWAK</h1>
+    </div>
+    <nav>
+      <a href="#surat">Surat Menyurat</a>
+      <a href="#permohonan">Permohonan Data GIS</a>
+      <a href="#zoom">Permohonan Zoom</a>
+      <a href="#login">Login Staf</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="surat">
+      <h2>Surat Menyurat</h2>
+      <p>Bahagian ini digunakan oleh staf untuk mengemaskini rekod surat masuk dan keluar. Klik butang di bawah untuk membuka borang Google Form rasmi Unit GIS DID Sarawak.</p>
+      <button onclick="window.open('PASTE_GOOGLE_FORM_SURAT_URL_DI_SINI','_blank')">📄 Buka Google Form Surat Menyurat</button>
+    </section>
+
+    <section id="permohonan">
+      <h2>Permohonan Data GIS</h2>
+      <p>Bahagian ini terbuka kepada pelanggan luar untuk membuat permohonan data GIS. Tiada log masuk diperlukan.</p>
+      <button onclick="window.open('PASTE_GOOGLE_FORM_DATA_GIS_URL_DI_SINI','_blank')">🌍 Buka Borang Permohonan Data GIS</button>
+    </section>
+
+    <section id="zoom">
+      <h2>Permohonan Zoom</h2>
+      <p>Gunakan borang berikut untuk memohon sesi Zoom rasmi bersama Unit GIS DID Sarawak.</p>
+      <button onclick="window.open('PASTE_GOOGLE_FORM_ZOOM_URL_DI_SINI','_blank')">🎥 Buka Borang Permohonan Zoom</button>
+    </section>
+
+    <section id="login">
+      <h2>Login Staf</h2>
+      <p>Staf Unit GIS boleh log masuk untuk mengakses maklumat surat dan permohonan terkini.</p>
+      <button onclick="alert('Fungsi login Firebase akan ditambah kemudian.')">🔐 Log Masuk Staf</button>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Unit GIS, Jabatan Pengairan dan Saliran Sarawak. Semua hak cipta terpelihara.
+  </footer>
+</body>
+</html>
