@@ -24,11 +24,9 @@
       justify-content: center;
       align-items: center;
       height: 80vh;
-      gap: 40px;
-      flex-wrap: wrap;
     }
 
-    .main-box, .login-box {
+    .login-box {
       background: white;
       padding: 40px;
       border-radius: 10px;
@@ -85,7 +83,6 @@
       padding: 10px 0;
       margin-top: 30px;
     }
-
   </style>
 </head>
 <body>
@@ -96,14 +93,8 @@
   </header>
 
   <div class="container">
-    <!-- Kotak kiri: Main Page -->
-    <div class="main-box">
-      <h2>Portal Utama</h2>
-      <p>Kembali ke laman utama portal UNIT GIS DID Sarawak.</p>
-      <button onclick="window.location.href='index.html'">Ke Laman Utama</button>
-    </div>
 
-    <!-- Kotak kanan: Login -->
+    <!-- Kotak Login -->
     <div class="login-box" id="loginBox">
       <h2>Login Staf</h2>
       <input type="text" id="username" placeholder="Username">
@@ -119,7 +110,7 @@
       <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfRmyFCLERKna02FCxBGpB9Ip__tFMvU__EvI9brLV8Yw3Bjw/viewform?pli=1','_blank')">📤 Muat Naik Surat</button>
       <button onclick="window.open('https://docs.google.com/spreadsheets/d/1sU7LlY6KfeX4uVF0QIkhG324syv6s__59RTDICMhl6A/edit?gid=1178412458#gid=1178412458','_blank')">📋 Respon Zoom</button>
       <button onclick="window.open('https://docs.google.com/spreadsheets/d/1a3xZLgYBNv_7KePII7KvM6sIrv441hTCaWIwQxvwkq8/edit?usp=sharing','_blank')">🗺️ Respon Data GIS</button>
-      <button onclick="window.open('https://docs.google.com/spreadsheets/d/13c4RS7CoUMWnC1hGSa8KDMg3x8pajdMEvMKf6-D4qWs/edit?resourcekey=&gid=635807791#gid=635807791','_blank')">✉️ Semak Record Surat Menyurat</button>
+      <button onclick="window.open('https://docs.google.com/spreadsheets/d/13c4RS7CoUMWnC1hGSa8KDMg3x8pajdMEvMKf6-D4qWs/edit?resourcekey=&gid=635807791#gid=635807791','_blank')">✉️ Semak Rekod Surat Menyurat</button>
       <br>
       <button onclick="logout()">Log Keluar</button>
     </div>
@@ -136,7 +127,6 @@
 
       if (user === "gis" && pass === "gis123") {
         document.getElementById('loginBox').classList.add('hidden');
-        document.querySelector('.main-box').classList.add('hidden');
         document.getElementById('staffMenu').classList.remove('hidden');
       } else {
         document.getElementById('error').style.display = 'block';
@@ -146,7 +136,6 @@
     function logout() {
       document.getElementById('staffMenu').classList.add('hidden');
       document.getElementById('loginBox').classList.remove('hidden');
-      document.querySelector('.main-box').classList.remove('hidden');
       document.getElementById('username').value = '';
       document.getElementById('password').value = '';
       document.getElementById('error').style.display = 'none';
